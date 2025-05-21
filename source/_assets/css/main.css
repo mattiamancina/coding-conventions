@@ -1,0 +1,77 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+/* Code syntax highlighting, powered by https://highlightjs.org */
+@import 'highlight.js/styles/a11y-light.css';
+
+@import 'base';
+@import 'navigation';
+@import 'documentation';
+@import 'search';
+
+@import 'tailwindcss/utilities';
+
+@layer base {
+  ol {
+    margin-left: 0;
+    padding-left: 0;
+    list-style-position: inside;
+  }
+}
+
+/* Base card */
+.conditional-card {
+  position: relative;
+  background: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-left: 4px solid;           /* color set by modifier */
+  padding: 1.5rem 1rem 1rem;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+/* Good vs. Bad modifiers */
+.conditional-card--good {
+  border-color: #4caf50;
+}
+.conditional-card--bad {
+  border-color: #f44336;
+}
+
+/* Status icon */
+.conditional-card .status-icon {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  background: currentColor;         /* use the same color as the border */
+  color: #fff;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: bold;
+}
+.conditional-card--good .status-icon { color: #4caf50; }
+.conditional-card--bad  .status-icon { color: #f44336; }
+
+
+/* Code styling */
+.conditional-card .code-block {
+  margin: 0;
+  padding: 20px;
+  background: transparent;
+  font-family: Menlo, Consolas, "Courier New", monospace;
+  font-size: 0.95rem;
+  color: #333;
+}
+.conditional-card .code-block code { display: block; white-space: pre; }
+
+/* Responsive tweak */
+@media (max-width: 480px) {
+  .conditional-card {
+    padding: 1rem 0.75rem 0.75rem;
+  }
+}
