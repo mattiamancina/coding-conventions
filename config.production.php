@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'baseUrl' => 'https://mattiamancina.github.io/code-conventions',
+    'baseUrl' => 'https://mellifluous-valkyrie-982b71.netlify.app',
     'production' => true,
 
     // DocSearch credentials
