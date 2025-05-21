@@ -32,4 +32,7 @@ return [
      'highlight' => [
          'theme' => 'okaidia'
     ],
+    'build' => [
+        'destination' => './docs',
+    ],
 ];
