@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
  <url>
-  <loc>https://mattiamancina.github.io/code-conventions/docs/navigation</loc>
-  <lastmod>2025-05-21T13:14:17+00:00</lastmod>
+  <loc>https://mellifluous-valkyrie-982b71.netlify.app/docs/navigation</loc>
+  <lastmod>2025-05-21T13:38:44+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
-  <loc>https://mattiamancina.github.io/code-conventions/docs/php</loc>
-  <lastmod>2025-05-21T13:14:17+00:00</lastmod>
+  <loc>https://mellifluous-valkyrie-982b71.netlify.app/docs/php</loc>
+  <lastmod>2025-05-21T13:38:44+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
-  <loc>https://mattiamancina.github.io/code-conventions</loc>
-  <lastmod>2025-05-21T13:14:17+00:00</lastmod>
+  <loc>https://mellifluous-valkyrie-982b71.netlify.app</loc>
+  <lastmod>2025-05-21T13:38:44+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
 </urlset>
