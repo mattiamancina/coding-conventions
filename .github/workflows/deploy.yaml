@@ -21,6 +21,9 @@ jobs:
           php-version: 8.2
           extensions: mbstring, xml, gd
 
+      - name: Node
+        uses: actions/setup-node@v4
+
       - name: Install Composer dependencies
         run: composer install --no-interaction --no-progress --prefer-dist
 
