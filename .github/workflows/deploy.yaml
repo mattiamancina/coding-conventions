@@ -11,12 +11,12 @@ jobs:
 
     steps:
       - name: Checkout source
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0       # needed to push tags & branches
 
       - name: Set up PHP
-        uses: shivammathur/setup-php@v4
+        uses: shivammathur/setup-php@v2
         with:
           php-version: 8.1     # match your Jigsaw requirement
           extensions: mbstring, xml, gd
