@@ -1,0 +1,34 @@
+name: Deploy Jigsaw to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main      # or master, whichever holds your source
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0       # needed to push tags & branches
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v4
+        with:
+          php-version: 8.1     # match your Jigsaw requirement
+          extensions: mbstring, xml, gd
+
+      - name: Install Composer dependencies
+        run: composer install --no-interaction --no-progress --prefer-dist
+
+      - name: Build Jigsaw site
+        run: vendor/bin/jigsaw build production
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build_production
